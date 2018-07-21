@@ -2,7 +2,7 @@
 
 class Criptografia {
 
-    private $password = 'Cf=a+8%b2p6*hM2-Br!&RYAX%6t8K@?g5%QR=A9?*KKHRw6JG-Z*Q=5attXxt!8-xC+ArwT8e3JDqx_6g@HfvETu?MHerUxdAZpM8a&WWp';
+    private $password = '@535sjfsjnfwihf8ybf80niosdjkgbsiooCf6QR=A9=a+8%b2p?_6g@HfvETu=a+8%b2p?MH*=a+8%b2pKKHRw6JG-Z=a+8%b2p*Q=a+8%b2p=5attXxt!8-xC*hM2-Br!&RYAX%6t8K@?g5%+ArwT8e3JDqxerUxdAZpM8a&WWp';
 
     function setKey($password) {
         $this->password = $password;
