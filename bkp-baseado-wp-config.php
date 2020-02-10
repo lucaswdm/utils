@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 
 $FILE = $argv[1];
