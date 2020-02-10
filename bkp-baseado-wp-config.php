@@ -10,8 +10,12 @@ echo PHP_EOL;
 $DIRWP = dirname($FILE) . '/';
 
 if(!is_dir($DIRWP . 'wp-includes/')&&is_dir($DIRWP . 'htdocs/wp-includes/')) $DIRWP .= 'htdocs/';
+echo $DIRWP . PHP_EOL;
 if(!is_dir($DIRWP . 'wp-includes/')&&is_dir($DIRWP . 'www/wp-includes/')) $DIRWP .= 'www/';
+echo $DIRWP . PHP_EOL;
 if(!is_dir($DIRWP . 'wp-includes/')&&is_dir($DIRWP . 'public_html/wp-includes/')) $DIRWP .= 'public_html/';
+
+echo $DIRWP . PHP_EOL;
 
 if(is_dir($DIRWP))
 {
