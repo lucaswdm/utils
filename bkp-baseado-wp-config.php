@@ -21,7 +21,7 @@ if(!is_dir($DIRWP . 'wp-includes/')&&is_dir($DIRWP . 'public_html/wp-includes/')
 
 if(is_dir($DIRWP))
 {
-     echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
+     #echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
      if( is_dir($DIRWP . 'wp-includes/') && is_dir($DIRWP . 'wp-admin/') && is_dir($DIRWP . 'wp-content/') )
      {
           #echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
