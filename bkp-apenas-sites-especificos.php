@@ -2,7 +2,7 @@
 
 $DIRBASE = '/var/www/';
 
-$DOMINIOS = mb_strtolower("cartaodecreditoonline.org
+$DOMINIOSTXT = mb_strtolower("cartaodecreditoonline.org
 beautyblog.com.br
 creditoparatodos.org
 ideabrasil.com.br
@@ -11,7 +11,7 @@ simpatiaspoderosas.org
 jeitofitness.com
 blogdakamaleoah.com");
 
-$DOMINIOS = array_filter('trim', explode(PHP_EOL, $DOMINIOS));
+$DOMINIOS = array_filter(array_map('trim', explode(PHP_EOL, $DOMINIOSTXT)));
 
 foreach($DOMINIOS as $dominio)
 {
