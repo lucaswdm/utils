@@ -21,7 +21,8 @@ if(is_dir($DIRWP))
 {
      if( is_dir($DIRWP . 'wp-includes/') && is_dir($DIRWP . 'wp-admin/') && is_dir($DIRWP . 'wp-content/') )
      {
-          $SHELL = "cd ".$DIRWP."; wp-cli db export --allow-root --skip-themes --skip-plugins --path=" . $DIRWP";
+          $SHELL = "cd ".$DIRWP."; ";
+          $SHELL .= "wp-cli db export --allow-root --skip-themes --skip-plugins --path=" . $DIRWP;
           echo $SHELL . ';' . PHP_EOL;
      }
      else
