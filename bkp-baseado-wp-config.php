@@ -21,18 +21,22 @@ echo $DIRWP . PHP_EOL;
 
 if(is_dir($DIRWP))
 {
+     echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
      if( is_dir($DIRWP . 'wp-includes/') && is_dir($DIRWP . 'wp-admin/') && is_dir($DIRWP . 'wp-content/') )
      {
+          echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
           $SHELL = "cd ".$DIRWP."; ";
           $SHELL .= "wp-cli db export --allow-root --skip-themes --skip-plugins --path=" . $DIRWP;
           echo $SHELL . ';' . PHP_EOL;
      }
      else
      {
+          echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
           echo $DIRWP . ' WP BASE DIRS #404' . PHP_EOL;    
      }
 }
 else
 {
+     echo __FILE__ . "\t" . __LINE__ . "\t" . rand();
      echo $DIRWP . ' #404' . PHP_EOL;
 }
