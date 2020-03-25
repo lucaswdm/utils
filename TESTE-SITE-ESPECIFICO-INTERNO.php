@@ -2,10 +2,11 @@
   
   function validacao()
   {
-      $url = 'https://comidinhasdochef.com/';
+      $url = 'https://116.202.221.32/';
       $dados = get_data($url);
-      print_r($dados);
-      return true;
+      #print_r($dados);
+      if($dados[0]['http_code'] == 200 && strpos($dados[1],'comidinhasdochef.com') !== false) return true;
+	  return false;
   }
   
   
@@ -22,7 +23,9 @@ function get_data($url, $POST = false, $FLG_FOLLOW_REDIRECT = false)
 {
 	$ch = curl_init();
 	$timeout = 10;
-	$header = array();
+	$header = array(
+		'Host: comidinhasdochef.com'
+	);
 
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
