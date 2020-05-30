@@ -11,7 +11,7 @@
     $B = rand(1,9999);
     $C = rand(1,9999);
 
-    $URL = "http://".$IP."/verify.data2.php?a=" . $A . '&b=' . $B . '&c=' . $C;
+    $URL = "http://".$IP."/Z2MONIT_VERIFY.php?a=" . $A . '&b=' . $B . '&c=' . $C;
 
     $RESULTADO_REAL = get_data($URL);
 
