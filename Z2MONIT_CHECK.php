@@ -1,6 +1,6 @@
 <?php
 
-    $IP = @file_get_contents('/root/ip.txt');
+    $IP = trim(@file_get_contents('/root/ip.txt'));
 
     if(!filter_var($IP, FILTER_VALIDATE_IP))
     {
