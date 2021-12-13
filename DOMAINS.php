@@ -1,4 +1,6 @@
-function validaDominio($domain_name)
+<?php
+
+function validateDomain($domain_name)
 {
     if(filter_var($domain_name, FILTER_VALIDATE_IP)) return false;
     if(strpos($domain_name, '.') === false) return false;
