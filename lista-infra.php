@@ -156,7 +156,10 @@ function get_data($url, $POST = false, $FLG_FOLLOW_REDIRECT = false)
 	$HTML .= "<h2>".count($INFRA['domains'])." DOMINIOS</h2>";
 	foreach($INFRA['domains'] as $domain => $xxxx)
 	{
-		$HTML .= "<div><a href='http://".$domain."/' target='_blank'>".$domain."</a></div>";
+		$PATH = '/data/' . $domain . '/';
+		$ESPACO = trim(shell_exec("du -s '".$PATH."'"));
+		$HTML .= "<div>{$ESPACO} <a href='http://".$domain."/' target='_blank'>".$domain."</a></div>";
+		break;
 	}
 
 	$HTML .= "<style></style>";
