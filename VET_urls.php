@@ -1,10 +1,14 @@
 <?php
 
+$RURI = $_SERVER['REQUEST_URI'];
+if($k = strpos($RURI, '?')) $RURI = substr($RURI, 0, $k);
+
 $SECOES = array_values(array_filter(array_map(function($item){
-    return preg_replace('/[^0-9a-z\-\.\_]/i','', $item);
-}, explode('/', $_SERVER['REQUEST_URI'])), function($item){
+    return preg_replace('/[^0-9a-z\-\.\_\%]/i','', $item);
+}, explode('/', $RURI)), function($item){
     return $item != '';
 }));
+
 
   $SECAO = $SECOES[0];
 
